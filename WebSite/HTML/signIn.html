@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập </title>
+    <link rel="stylesheet" href="/CSS/canBan.css">
+    <style>
+        a{
+            text-decoration:none;
+            text-align: right;
+            width: 320px;
+        }
+
+        span{
+            color: #6f7a86;
+            text-align: center;
+            padding-top: 10px;   
+        }
+        .button2{
+            width: 160px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+        .button2 span{
+            color: white;
+            width: 100px;
+            height: 45px;
+            padding-top: 12.5px;
+        }
+        section{
+            width: 340px;
+            display: flex ;
+            justify-content: center; 
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <div>
+            <form>
+                <h1>Đăng Nhập</h1>
+                <input type="email" class="formControl" name="email" placeholder="Email" required>
+                <input type="password" class="formControl" name="matKhau" placeholder="Mật Khẩu" required>
+                <a href="/HTML/forget_pass.html">Quên mật khẩu</a>
+                <button type="submit" class="button">Đăng Nhập</button>   
+                <span>Hoặc đăng nhập bằng</span>
+                <section>
+                    <div class="button2" style="background-color: #e73b2f">
+                        <img src="/Media/search.png" width="25px" height="25px" alt="FB"><span style="">Google</span>
+                </div>
+
+                <div class="button2" style="background-color: #1877f2">
+                    <img src="/Media/facebook.png" width="25px" height="25px" alt="FB"><span style="">Facebook</span>
+                </div>
+                
+                </section>
+            </form>
+            
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,154 @@
+ * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        main {
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding: 20px;
+            margin: 0 0 0 0 ;
+        }
+
+
+        div {
+            width: 420px;
+            padding: 20px 50px;
+            margin: 50px 0 0 0;
+            border-radius: 25px;
+            box-shadow: 0px 5px 15px #BBBBBB;
+            background: #fff;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Áp dụng chung cho input & select */
+        .formControl {
+            width: 340px;
+            height: 45px;
+            border: 1px solid #BBBBBB;
+            border-radius: 25px;
+            padding: 0 15px;
+            margin: 8px 0;
+            font-size: 16px;
+            color: #555;
+            box-sizing: border-box;
+            transition: border 0.2s ease;
+        }
+
+        .formControl:focus,
+        .formControl:hover {
+            border: 2px solid #1da5db;
+            outline: none;
+            
+        }
+        .formControl:focus{
+            background-color:#f2f8f9;
+        }
+
+        .button {
+            width: 340px;
+            height: 45px;
+            background-color: #1da5db;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-size: 18px;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .button:hover {
+            background-color: #148bb8;
+            box-shadow: 0px 4px 10px rgba(20, 139, 184, 0.3);
+        }
+
+        /* menu */
+        header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #f7f7f7;
+            padding: 0 0 0 0 ;
+            margin: 0 0 0 0 ;
+        }
+        .menu{
+            display: flex;
+            list-style: none;
+            align-items: center;
+            width: 1000px;
+            height: 60px;
+        }
+        .menu a{
+            text-decoration: none;
+            color: black;
+            display: block;
+            text-align: center;
+            padding-top: 13px;
+            margin: 5px 5px 5px 5px;
+            font-size: larger;
+            
+        }
+       
+        .menu li {
+            flex: 1;
+        }
+        .menu ul {
+            position: absolute;
+            list-style: none;
+            padding: 10px;
+            background-color: #f7f7f7;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            border: 0px solid #ddd;
+            border-radius: 20px;
+            margin-top: 5px;
+
+            /* Ẩn bằng opacity và transform thay vì display */
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+
+        .menu li:hover > ul {
+            opacity: 1;
+            position: absolute;
+            visibility: visible;
+            transform: translateY(0);
+            
+        }
+
+        .menu li ul:hover {
+            background-color:#f7f7f7;
+        }
+        .menu li ul li a{
+            text-align: left;
+        }
+        .menu li ul li a:hover {
+            width: auto;
+            background-color:#aee5f9;
+            border: 0px solid;
+            border-radius: 25px;
+            padding: 5px 10px 5px 10px;
+            transition: background-color 0.3s ease;
+            transition: width 0.3s ease;
+            box-shadow: 0px 5px 15px rgba(20, 139, 184, 0.3);
+        }
+        
+    

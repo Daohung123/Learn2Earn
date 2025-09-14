@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn2Earn</title>
+    <style>
+        header{
+            display: flex;
+            width: 100%;
+            text-align: center;
+            
+        }
+        .control{
+            flex: 4;
+        }
+
+        /*Menu control*/
+        .control li:hover > ul{
+            display: block;
+        }
+        
+        .control ul{
+            display: flex;  
+            justify-content: left;
+            flex-direction: row ;
+            list-style: none;
+        }
+
+        .control li{
+            flex: 1;
+            position: relative;
+        }
+        
+        .control a:hover{
+            color: black;
+        }
+        
+        .control a{
+            
+            color: #666666;
+            text-decoration: none;
+        }
+
+        .control ul ul{
+            display: none ;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1; 
+            text-align:left;
+        }
+
+        /*control2*/
+        .control2{
+            flex:6;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="control">
+            <ul>
+                <li>
+                    <a href="#">Việc làm</a>
+                    <ul>
+                        <li><a href="#">Tìm kiếm việc làm</a></li>
+                        <li><a href="#">Việc làm đã lưu</a></li>
+                        <li><a href="#">Việc làm đã ứng tuyển</a></li>
+                        <li><a href="#">Việc làm part-time</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Tạo CV</a>
+                    <ul>
+                        <li><a href="#">Tạo CV AI </a></li>
+                        <li><a href="#">Tạo CV thủ công</a></li>
+                        <li><a href="#">Tạo CV theo yêu cầu</a></li>
+                        <li><a href="#">Mẫu CV</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Thủ thuật </a>
+                    <ul>
+                        
+                    </ul>
+            </ul>
+        </nav>
+        
+
+        <div class="control2">
+            <button id="dangnhap">Đăng Nhập</button>
+        </div>
+    </header>
+
+
+    <main>
+        <div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+    </footer>
+</body>
+</html>

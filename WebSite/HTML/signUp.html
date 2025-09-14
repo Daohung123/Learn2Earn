@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Tài Khoản</title>
+    <link rel="stylesheet" href="/CSS/canBan.css">
+</head>
+<body>
+    <header>
+       
+    </header>
+    <main>
+        <div>
+            <form>
+                <h1>Đăng Ký Tài Khoản</h1>
+                <input type="text" class="formControl" name="hoTen" placeholder="Họ và tên" required>
+                <input type="email" class="formControl" name="email" placeholder="Email" required>
+                <input type="password" class="formControl" name="matKhau" placeholder="Mật Khẩu" required>
+                <input type="password" class="formControl" name="xacNhanMatKhau" placeholder="Xác Nhận Mật Khẩu" required>
+                
+                <select class="formControl" name="vaiTro" required>
+                    <option value="">-- Chọn Vai Trò --</option>
+                    <option value="sinhVien">Sinh Viên</option>
+                    <option value="nhaTruong">Nhà Trường</option>
+                    <option value="doanhNghiep">Doanh Nghiệp</option>
+                </select>
+
+                    <span><input type="checkbox" required> Tôi đồng ý với <a href="#">Điều Khoản</a> & <a href="#">Chính Sách Bảo Mật</a></span>
+                <button type="submit" class="button">Đăng Ký</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn2Earn</title>
+    <link rel="stylesheet" href="/CSS/grid.css">
+    <style>
+        
+        nav{
+            display : flex;
+            justify-content: left;
+            padding: 10px 20px 20px 20px;
+        }
+         * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+
+        main {
+            justify-content: center;
+            align-items: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding: 0 0 0 0 ;
+            margin: 0 0 0 0 ;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 28px;
+            width: 860px;
+            text-align: center;
+        }
+
+        /* Áp dụng chung cho input & select */
+        .formControl {
+            width: 340px;
+            height: 45px;
+            border: 1px solid #BBBBBB;
+            border-radius: 25px;
+            padding: 0 15px;
+            margin: 8px 0;
+            font-size: 16px;
+            color: #555;
+            box-sizing: border-box;
+            transition: border 0.2s ease;
+        }
+
+        .formControl:focus,
+        .formControl:hover {
+            border: 2px solid #1da5db;
+            outline: none;
+            
+        }
+        .formControl:focus{
+            background-color:#f2f8f9;
+        }
+
+        .button {
+            width: 340px;
+            height: 45px;
+            background-color: #1da5db;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-size: 18px;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .button:hover {
+            background-color: #148bb8;
+            box-shadow: 0px 4px 10px rgba(20, 139, 184, 0.3);
+        }
+
+        /* menu */
+        header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #f7f7f7;
+            padding: 0 0 0 0 ;
+            margin: 0 0 0 0 ;
+        }
+        .menu{
+            display: flex;
+            list-style: none;
+            align-items: center;
+            width: 1000px;
+            height: 60px;
+        }
+        .menu a{
+            text-decoration: none;
+            color: black;
+            display: block;
+            text-align: center;
+            padding-top: 13px;
+            margin: 5px 5px 5px 5px;
+            font-size: larger;
+            
+        }
+       
+        .menu li {
+            flex: 1;
+        }
+        .menu ul {
+            position: absolute;
+            list-style: none;
+            padding: 10px;
+            background-color: #f7f7f7;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            border: 0px solid #ddd;
+            border-radius: 20px;
+            margin-top: 5px;
+
+            /* Ẩn bằng opacity và transform thay vì display */
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+
+        .menu li:hover > ul {
+            opacity: 1;
+            position: absolute;
+            visibility: visible;
+            transform: translateY(0);
+            
+        }
+
+        .menu li ul:hover {
+            background-color:#f7f7f7;
+        }
+        .menu li ul li a{
+            text-align: left;
+            padding-left: 25px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+        .menu li ul li a:hover {
+            width: auto;
+            background-color:#aee5f9;
+            border: 0px solid;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+            transition: width 0.3s ease;
+            box-shadow: 0px 5px 15px rgba(20, 139, 184, 0.3);
+        }
+        .menu li ul{
+            width: 500px;
+         }
+         .menu li ul li{
+            
+         }
+        /*Tìm Kiếm*/
+        #timkiem{
+             background-image : url('/Media/Bg.jpg');
+             width:100%;
+             height: 250px;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             padding: 0 0 0 0 ;
+             gap: 10px;
+        }
+        #nentimkiem{
+            width: 860px;
+            height: 85px;
+            padding: 20px 30px;
+            margin: 0 0 0 0;
+            border-radius: 25px;
+            box-shadow: 0px 5px 15px #BBBBBB;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+        .thanhtimkiem{
+            width: 300px;
+            height: 45px;
+            padding: 20px 30px;
+            margin: 0 1.5% 0 0;
+            border-radius: 25px;
+            box-shadow: 0px 5px 15px #BBBBBB;
+            background: #fff;
+        }
+        .thanhtimkiem:hover{
+            background-color:#BBBBBB;
+        }
+        #formtimkiem{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        #menutimkiem{
+            width: 460px; 
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 30px;
+            margin: 10px 10px;
+        }
+        #menutimkiem section{
+            width: 150px;
+            height: 300px;
+            border: 0px solid black;
+            padding: 10px 10px;
+            border-radius: 25px;
+            box-shadow: 0 5px 5px gray;
+        }
+        #menutimkiem content{
+            font-size:medium;
+        }        
+
+        /*nội dung chính*/
+        #noidung{
+            background-color:#f2f4f6;
+            width:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px 0 20px 0;
+            margin: 0 0 0 0;
+            gap: 20px;
+        }
+        .vieclam{
+            width: 860px;
+            border: 0px solid black;
+            box-shadow: 0 10 5 15 grey inset;
+            cursor: pointer;
+            
+        }
+
+        /*Menu2*/
+        .menu2{
+            position: relative;
+            top:100%;
+            left: -5%;
+            height: 200px;
+            background-color: white;
+            border: 0px solid black;
+            border-radius: 15px;
+            padding: 0 0;
+            box-shadow:  0px 10px 20px rgba(0,0,0,0.2);
+            width: 280px;
+            height: 230px;
+            display: none;
+            
+        }
+        .menu2 ul{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            padding-top: 15px;
+            padding-left: 15px;
+            margin: 0px 0px 0px 0px;
+        }
+        .menu2 ul li{
+            position: relative;
+            margin: 0px 0px 0px 0px;
+            padding-top: 15px ;
+            padding-bottom: 35px ;
+            padding-left: 20px ;
+            font-size: medium;
+            width: 250px;
+            height: 30px;
+            border: 0 px solid black;
+            text-align: left;
+            border-radius: 10px;
+           
+        }
+        .menu2 ul li:hover{
+            color: black;
+            background-color:#aee5f9;
+        }
+
+    </style>
+</head>
+<body>
+    <header> 
+        
+        <nav>
+            <img src="/Media/logo (1).png" alt="logo" style="padding: 0px; margin:0px ; width:auto ;height:60px;">
+            <ul class="menu" >
+                <li>
+                    <a href="#">Việc Làm</a>
+                    <ul>
+                        <li><a href="#">Việc Làm IT</a></li>
+                        <li><a href="#">Việc Làm Marketing</a></li>
+                        <li><a href="#">Việc Làm Kinh Doanh</a></li>
+                        <li><a href="#">Việc Làm Thiết Kế</a></li>
+                        <li><a href="#">Việc Làm Tài Chính</a></li>
+                        <li><a href="#">Việc Làm Bán Hàng</a></li>
+                        <li><a href="#">Việc Làm Khác</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Doanh Nghiệp</a>
+                    <ul>
+                        <li><a href="#">Đăng Tin Tuyển Dụng</a></li>
+                        <li><a href="#">Quản Lý Ứng Viên</a></li>
+                        <li><a href="#">Gói Dịch Vụ</a></li>
+                        <li><a href="#">Tư Vấn Tuyển Dụng</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Sinh Viên</a>
+                    <ul>
+                        <li><a href="#">Hướng Nghiệp</a></li>
+                        <li><a href="#">Việc Làm Thực Tập</a></li>
+                        <li><a href="#">Cẩm Nang Việc Làm</a></li>
+                        <li><a href="#">Khóa Học Online</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Khóa Học</a>
+                <ul>
+                    <li><a href="#">Khóa Học IT</a></li>
+                    <li><a href="#">Khóa Học Marketing</a></li>
+                    <li><a href="#">Khóa Học Kinh Doanh</a></li>
+                    <li><a href="#">Khóa Học Thiết Kế</a></li>
+                    <li><a href="#">Khóa Học Tài Chính</a></li>
+                    <li><a href="#">Khóa Học Bán Hàng</a></li>
+                    <li><a href="#">Khóa Học Khác</a></li>
+                </ul></li>
+                <li><a href="#">Liên Hệ</a>
+                    <ul>
+                        <li><a href="#">Hỗ Trợ</a></li>
+                        <li><a href="#">Góp Ý</a></li>
+                        <li><a href="#">Liên Hệ Chúng Tôi</a></li>
+                    </ul>
+                </li>
+              
+                <li>
+                    <button class="button" style="width:120px; background-color: #f0f9fb; border: 1px solid #1da5db; color:#1da5db" onclick="window.location.href='/HTML/signUp.html'">Đăng Ký </button>
+                </li>
+                <li>
+                    <button class="button" style="width:120px" onclick="window.location.href='/HTML/signIn.html'">Đăng Nhập </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="timkiem">
+            <h1 style=" padding:20px; margin: 0;">Learn2Earn – Kết nối sinh viên, nhà trường và doanh nghiệp</h1>
+            <div id="nentimkiem">
+                <form id="formtimkiem">  
+                    <input type="text" style="margin: 0px 40px 0px 0px; width: 560px" class="formControl" name="timKiem" placeholder="Tìm kiếm việc làm, khóa học, doanh nghiệp..." required>
+                    <button type="submit" class="button" style="width:200px; margin: 0 0 0 0;  ">Tìm Kiếm</button>
+
+                </form>
+                
+            </div>
+            <section>
+                
+            </section>
+        </section>
+        
+
+        <section id="noidung" >
+            <div class="vieclam">
+                <h2>Việc làm Phù Hợp Nhất </h2>
+                <div id="nutLoc" class="formControl" style="width: 280px; border-radius: 2px; background-color: white; padding-top:10px;">
+                    <span style="margin-right: 30px;">Lọc Theo:</span>
+                    <span style="margin-right: 20px; ">Địa Điểm</span>
+                    <span onclick="">▼</span>
+                    <div class="menu2" id="menu2">
+                        <ul>
+                            <li><span>Địa Điểm</span></li>
+                            <li><span>Mức Lương</span></li>
+                            <li><span>Kinh Nghiệm</span></li>
+                            <li><span>Ngành Nghề</span></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+                </div>
+            
+
+            <div class ="grid-container">
+                
+            </div>
+
+        </section>
+        <script>
+                const nutLoc = document.getElementById("nutLoc");
+                const menu = document.querySelector(".menu2");
+
+                // Khi click vào nút lọc thì toggle menu
+                nutLoc.addEventListener("click", function (e) {
+                    e.stopPropagation(); // Ngăn sự kiện lan ra ngoài
+                    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+
+                });
+
+                // Khi click ra ngoài menu thì ẩn nó đi
+                document.addEventListener("click", function () {
+                    menu.style.display = "none";
+                });
+
+                // Nếu click bên trong menu thì không bị ẩn
+                menu.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                });
+
+        </script>
+    </main>
+    
+</body>
+</html>
